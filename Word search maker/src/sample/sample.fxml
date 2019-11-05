@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="700.0">
+         <children>
+            <Button layoutX="55.0" layoutY="33.0" mnemonicParsing="false" onAction="#start" text="Start" />
+            <GridPane fx:id="gp" gridLinesVisible="true" layoutX="145.0" layoutY="58.0" prefHeight="450.0" prefWidth="450.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="ch00" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#WordMake" prefHeight="75.0" prefWidth="75.0" text="" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ch01" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#WordMake" prefHeight="75.0" prefWidth="75.0" text="" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ch02" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#WordMake" prefHeight="75.0" prefWidth="75.0" text="" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ch03" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#WordMake" prefHeight="75.0" prefWidth="75.0" text="" GridPane.columnIndex="3" GridPane.rowIndex="0">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ch04" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#WordMake" prefHeight="75.0" prefWidth="75.0" text="" GridPane.columnIndex="4" GridPane.rowIndex="0">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ch05" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#WordMake" prefHeight="75.0" prefWidth="75.0" text="" GridPane.columnIndex="5" GridPane.rowIndex="0">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ch10" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#WordMake" prefHeight="75.0" prefWidth="75.0" text="" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ch11" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#WordMake" prefHeight="75.0" prefWidth="75.0" text="" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ch12" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#WordMake" prefHeight="75.0" prefWidth="75.0" text="" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ch13" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#WordMake" prefHeight="75.0" prefWidth="75.0" text="" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ch14" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#WordMake" prefHeight="75.0" prefWidth="75.0" text="" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ch15" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#WordMake" prefHeight="75.0" prefWidth="75.0" text="" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ch20" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#WordMake" prefHeight="75.0" prefWidth="75.0" text="" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ch21" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#WordMake" prefHeight="75.0" prefWidth="75.0" text="" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ch22" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#WordMake" prefHeight="75.0" prefWidth="75.0" text="" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ch23" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#WordMake" prefHeight="75.0" prefWidth="75.0" text="" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ch24" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#WordMake" prefHeight="75.0" prefWidth="75.0" text="" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ch25" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#WordMake" prefHeight="75.0" prefWidth="75.0" text="" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ch30" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#WordMake" prefHeight="75.0" prefWidth="75.0" text="" GridPane.columnIndex="0" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ch31" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#WordMake" prefHeight="75.0" prefWidth="75.0" text="" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ch32" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#WordMake" prefHeight="75.0" prefWidth="75.0" text="" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ch33" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#WordMake" prefHeight="75.0" prefWidth="75.0" text="" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ch34" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#WordMake" prefHeight="75.0" prefWidth="75.0" text="" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ch35" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#WordMake" prefHeight="75.0" prefWidth="75.0" text="" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ch40" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#WordMake" prefHeight="75.0" prefWidth="75.0" text="" GridPane.columnIndex="0" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ch41" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#WordMake" prefHeight="75.0" prefWidth="75.0" text="" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ch42" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#WordMake" prefHeight="75.0" prefWidth="75.0" text="" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ch43" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#WordMake" prefHeight="75.0" prefWidth="75.0" text="" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ch44" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#WordMake" prefHeight="75.0" prefWidth="75.0" text="" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ch45" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#WordMake" prefHeight="75.0" prefWidth="75.0" text="" GridPane.columnIndex="5" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ch50" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#WordMake" prefHeight="75.0" prefWidth="75.0" text="" GridPane.columnIndex="0" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ch51" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#WordMake" prefHeight="75.0" prefWidth="75.0" text="" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ch52" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#WordMake" prefHeight="75.0" prefWidth="75.0" text="" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ch53" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#WordMake" prefHeight="75.0" prefWidth="75.0" text="" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ch54" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#WordMake" prefHeight="75.0" prefWidth="75.0" text="" GridPane.columnIndex="4" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ch55" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#WordMake" prefHeight="75.0" prefWidth="75.0" text="" GridPane.columnIndex="5" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+               </children>
+            </GridPane>
+            <Label fx:id="wordsList" layoutX="27.0" layoutY="102.0" prefHeight="220.0" prefWidth="41.0" text="words: MATH LABEL CLASS CHAR ROW" wrapText="true" />
+            <Label fx:id="currentWord" alignment="CENTER" layoutX="247.0" layoutY="25.0" prefHeight="17.0" prefWidth="101.0" />
+            <Button layoutX="499.0" layoutY="21.0" mnemonicParsing="false" onAction="#clearCurrentWord" text="Clear" />
+            <Label fx:id="log" alignment="CENTER" contentDisplay="CENTER" layoutX="247.0" layoutY="540.0" prefHeight="17.0" prefWidth="169.0" />
+            <Label fx:id="wleft" layoutX="27.0" layoutY="137.0" prefHeight="17.0" prefWidth="101.0" text="Words left: " />
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
