@@ -1,22 +1,31 @@
 package sample;
 
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
-
+import javafx.util.Duration;
+//timer https://www.youtube.com/watch?v=t2Bv6hwELsU
+//reader https://www.codespeedy.com/read-a-specific-line-from-a-text-file-in-java/
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 
 public class Controller {
+    Timeline clock = new Timeline();
+
     Button[][] board = new Button[6][6];
     char[][] charBoard = new char[6][6];
     int[][] data = new int[6][6];
-    int cl, rw, randcl, randrw, randdirect, randdirect2, lr, lc, wlf;
-    String[] words = new String[]{"ROW", "MATH", "CHAR","LABEL", "CLASS"};
+    int cl, rw, randcl, randrw, randdirect, randdirect2, lr, lc, wlf, r0,r1,r2,r3,r4, seconds;
+    int timeworks=0;
+    String[] words = new String[]{"COW", "MATH", "MOVE","LABEL", "MOUSE"};
     String randStringChar;
     String word;
     String letter;
@@ -25,11 +34,31 @@ public class Controller {
     @FXML
     private Label wleft;
     @FXML
+    private Label time;
+    @FXML
     private Label log;
+    @FXML
+    private Label word1;
+    @FXML
+    private Label word2;
+    @FXML
+    private Label word3;
+    @FXML
+    private Label word4;
+    @FXML
+    private Label word5;
     @FXML
     private Button ch00,ch01,ch02,ch03,ch04,ch05,ch10,ch11,ch12,ch13,ch14,ch15,ch20,ch21,ch22,ch23,ch24,ch25,ch30,ch31,ch32,ch33,ch34,ch35,ch40,ch41,ch42,ch43,ch44,ch45,ch50,ch51,ch52,ch53,ch54,ch55;
     @FXML
     private void start(){
+        timeworks++;
+        clock.stop();
+        seconds=61;
+        r0=0;
+        r1=0;
+        r2=0;
+        r3=0;
+        r4=0;
         word="";
         wlf=5;
         log.setText("");
@@ -85,6 +114,8 @@ public class Controller {
         fill();
         fillrandomchars();
         unsetDisable();
+        wordlist();
+        initialize();
     }
     @FXML
     private void WordMake(ActionEvent t){
@@ -115,6 +146,27 @@ public class Controller {
         letter="";
         currentWord.setText("");
         unsetDisable();
+    }
+    @FXML
+    public void initialize() {
+        //Timeline clock = new Timeline();
+        clock.setCycleCount(Timeline.INDEFINITE);
+            if(clock!=null){
+                clock.stop();
+            }
+        KeyFrame frame = new KeyFrame(Duration.seconds(1), new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                seconds--;
+                time.setText("Time left "+String.valueOf(seconds)+" seconds");
+                if(seconds<=0){
+                    clock.stop();
+                    timeout();
+                }
+            }
+        });
+            if(timeworks==1){clock.getKeyFrames().add(frame);}
+        clock.playFromStart();
     }
     public void setDisable(int r, int c){
         for(int i=0;i<board.length;i++){
@@ -235,16 +287,68 @@ public class Controller {
     }
     public void check(String w){
         for (int i=0; i<5;i++){
-            if(w.trim()==words[i].trim()){
-                log.setText("You found a word "+w);
+            if(w.equals(words[i])){
+                word="";
+                letter="";
+                currentWord.setText("");
+                unsetDisable();
+                if(i==0){
+                    word1.setText("");
+                    r0++;
+                    if (r0>1) {
+                        log.setText("You already have found word " +w);
+                        return;
+                    }
+                }
+                if(i==1){
+                    word2.setText("");
+                    r1++;
+                    if (r1>1) {
+                        log.setText("You already have found word " +w);
+                        return;
+                    }
+                }
+                if(i==2){
+                    word3.setText("");
+                    r2++;
+                    if (r2>1) {
+                        log.setText("You already have found word " +w);
+                        return;
+                    }
+                }
+                if(i==3){
+                    word4.setText("");
+                    r3++;
+                    if (r3>1) {
+                        log.setText("You already have found word " +w);
+                        return;
+                    }
+                }
+                if(i==4){
+                    word5.setText("");
+                    r4++;
+                    if (r4>1) {
+                        log.setText("You already have found word " +w);
+                        return;
+                    }
+                }
+                log.setText("You found a word: "+w);
                 wlf-=1;
                 wleft.setText("Words left: "+wlf);
-                unsetDisable();
                 if(wlf==0){
-                    log.setText("You won!");
+                    log.setText("You won! Your result is "+(60-seconds)+" seconds");
+                    clock.stop();
                 }
             }
         }
+    }
+    public void timeout(){
+        for(int i=0;i<board.length;i++){
+            for(int j=0; j< board.length; j++){
+                board[i][j].setDisable(true);
+            }
+        }
+        log.setText("Time is out!");
     }
     public void fill(){
         for(String w : words ){
@@ -412,92 +516,21 @@ public class Controller {
         for(int i=0; i<6; i++){
             for(int j=0;j<6;j++){
                 if(data[i][j]==2){
-                    int randIntChar=(int)(Math.random()*26+1);
+                    int randIntChar=(int)(Math.random()*26+1)+64;
                     randch(randIntChar,i,j);
                 }
             }
         }
     }
+    public void wordlist(){
+        word1.setText(words[0]);
+        word2.setText(words[1]);
+        word3.setText(words[2]);
+        word4.setText(words[3]);
+        word5.setText(words[4]);
+    }
     public void randch(int n, int i1, int j1){
-        randStringChar="B";
-        if(n==1){
-            randStringChar="A";
-        }
-        if(n==2){
-            randStringChar="B";
-        }
-        if(n==3){
-            randStringChar="C";
-        }
-        if(n==4){
-            randStringChar="D";
-        }
-        if(n==5){
-            randStringChar="E";
-        }
-        if(n==6){
-            randStringChar="F";
-        }
-        if(n==7){
-            randStringChar="G";
-        }
-        if(n==8){
-            randStringChar="H";
-        }
-        if(n==9){
-            randStringChar="I";
-        }
-        if(n==10){
-            randStringChar="J";
-        }
-        if(n==11){
-            randStringChar="K";
-        }
-        if(n==12){
-            randStringChar="L";
-        }
-        if(n==13){
-            randStringChar="M";
-        }
-        if(n==14){
-            randStringChar="N";
-        }
-        if(n==15){
-            randStringChar="O";
-        }
-        if(n==16){
-            randStringChar="P";
-        }
-        if(n==17){
-            randStringChar="Q";
-        }
-        if(n==18){
-            randStringChar="R";
-        }
-        if(n==19){
-            randStringChar="S";
-        }
-        if(n==20){
-            randStringChar="T";
-        }
-        if(n==21){
-            randStringChar="U";
-        }
-        if(n==22){
-            randStringChar="V";
-        }
-        if(n==23){
-            randStringChar="W";
-        }
-        if(n==24){
-            randStringChar="X";
-        }
-        if(n==25){
-            randStringChar="Y";
-        }
-        if(n==26){
-            randStringChar="Z";
-        }
+        randStringChar=String.valueOf((char)n);
         board[i1][j1].setText(String.valueOf((randStringChar.charAt(0))));
         charBoard[i1][j1]=randStringChar.charAt(0);
         data[i1][j1]=0;
