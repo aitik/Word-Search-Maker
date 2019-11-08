@@ -65,6 +65,12 @@
     </FindUsagesManager>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="261" />
+    <option name="y" value="15" />
+    <option name="width" value="1612" />
+    <option name="height" value="876" />
+  </component>
   <component name="ProjectId" id="1T7DVnrtRXaJDss0Rjs69sSE2Hu" />
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
@@ -79,9 +85,8 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="O:/Math/M359--Java - old/Daily Examples/SaveNLoad" />
     <property name="recentsLimit" value="5" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">

@@ -224,12 +224,13 @@
             <Label fx:id="log" alignment="CENTER" contentDisplay="CENTER" layoutX="247.0" layoutY="540.0" prefHeight="17.0" prefWidth="276.0" />
             <Label fx:id="wleft" layoutX="27.0" layoutY="137.0" prefHeight="17.0" prefWidth="101.0" text="Words left: " />
             <Label layoutX="27.0" layoutY="173.0" text="Words:" />
-            <Label fx:id="word1" layoutX="27.0" layoutY="190.0" text="word1" />
-            <Label fx:id="word2" layoutX="27.0" layoutY="207.0" text="word2" />
-            <Label fx:id="word3" layoutX="27.0" layoutY="224.0" text="word3" />
-            <Label fx:id="word4" layoutX="27.0" layoutY="241.0" text="word4" />
-            <Label fx:id="word5" layoutX="27.0" layoutY="258.0" text="word5" />
+            <Label fx:id="word1" layoutX="27.0" layoutY="190.0" text="" />
+            <Label fx:id="word2" layoutX="27.0" layoutY="207.0" text="" />
+            <Label fx:id="word3" layoutX="27.0" layoutY="224.0" text="" />
+            <Label fx:id="word4" layoutX="27.0" layoutY="241.0" text="" />
+            <Label fx:id="word5" layoutX="27.0" layoutY="258.0" text="" />
             <Label fx:id="time" layoutX="47.0" layoutY="25.0" prefHeight="17.0" prefWidth="153.0" text="Time" />
+            <Label fx:id="bestresult" layoutX="603.0" layoutY="199.0" prefHeight="39.0" prefWidth="89.0" wrapText="true" />
          </children>
       </AnchorPane>
    </children>
